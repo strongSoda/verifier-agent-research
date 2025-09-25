@@ -80,56 +80,6 @@ The results, based on a manual ground-truth evaluation of all 120 experimental r
 | No Verifier Baseline | 25% | 27% | **11** |
 | Self-Verifier Baseline | 30% | 29% | **10** |
 
-```mermaid
-graph TD
-    subgraph "False Positives (GPT-4o Results)"
-        A[Verifier System: 0] --o B(( )) & C(( )) & D(( )) & E(( )) & F(( )) & G(( )) & H(( )) & I(( )) & J(( )) & K(( )) & L(( ))
-        M[No Verifier Baseline: 11] --> N((██████████████████████████████))
-        O[Self-Verifier Baseline: 4] --> P((██████████))
-    end
-
-    subgraph "False Positives (Phi-2 Results)"
-        Q[Verifier System: 0] --o R(( )) & S(( )) & T(( )) & U(( )) & V(( )) & W(( )) & X(( )) & Y(( )) & Z(( )) & AA(( )) & AB(( ))
-        AC[No Verifier Baseline: 11] --> AD((██████████████████████████████))
-        AE[Self-Verifier Baseline: 10] --> AF((████████████████████████████))
-    end
-
-    style A fill:#fff,stroke:#fff,color:#000
-    style M fill:#fff,stroke:#fff,color:#000
-    style O fill:#fff,stroke:#fff,color:#000
-    style Q fill:#fff,stroke:#fff,color:#000
-    style AC fill:#fff,stroke:#fff,color:#000
-    style AE fill:#fff,stroke:#fff,color:#000
-    
-    style B fill:#fff,stroke:#fff
-    style C fill:#fff,stroke:#fff
-    style D fill:#fff,stroke:#fff
-    style E fill:#fff,stroke:#fff
-    style F fill:#fff,stroke:#fff
-    style G fill:#fff,stroke:#fff
-    style H fill:#fff,stroke:#fff
-    style I fill:#fff,stroke:#fff
-    style J fill:#fff,stroke:#fff
-    style K fill:#fff,stroke:#fff
-    style L fill:#fff,stroke:#fff
-    style R fill:#fff,stroke:#fff
-    style S fill:#fff,stroke:#fff
-    style T fill:#fff,stroke:#fff
-    style U fill:#fff,stroke:#fff
-    style V fill:#fff,stroke:#fff
-    style W fill:#fff,stroke:#fff
-    style X fill:#fff,stroke:#fff
-    style Y fill:#fff,stroke:#fff
-    style Z fill:#fff,stroke:#fff
-    style AA fill:#fff,stroke:#fff
-    style AB fill:#fff,stroke:#fff
-
-    style N fill:#f8d7da,stroke:#721c24
-    style P fill:#f8d7da,stroke:#721c24
-    style AD fill:#f8d7da,stroke:#721c24
-    style AF fill:#f8d7da,stroke:#721c24
-```
-
 ### **5. Outcomes & Insights**
 
 1.  **The Verifier Architecture Eliminates False Positives:** The most critical finding is that the Verifier System achieved **zero false positives** across both models. It never reported a failed task as a success. This proves the architectural pattern is robust and effective at preventing the most dangerous type of agent failure.
