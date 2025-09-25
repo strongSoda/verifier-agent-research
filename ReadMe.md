@@ -25,7 +25,25 @@ This makes it difficult to trust autonomous agents in high-stakes environments.
 
 We propose a simple architectural solution: a linear, three-agent workflow.
 
-!(https://storage.googleapis.com/agentops-images/agent-verifier-flow.png)
+```mermaid
+graph TD;
+    A[Start: User Goal] --> B{Planner Agent};
+    B --> C{Executor Agent};
+    C --> D{Verifier Agent};
+    D --> E[End: Verified Outcome];
+
+    subgraph "Agentic System"
+        B;
+        C;
+        D;
+    end
+
+    style A fill:#d4edda,stroke:#155724
+    style E fill:#d4edda,stroke:#155724
+    style B fill:#fff3cd,stroke:#856404
+    style C fill:#cce5ff,stroke:#004085
+    style D fill:#f8d7da,stroke:#721c24
+```
 
 1.  **The Planner Agent:** Receives a high-level goal and breaks it down into a single, concrete task. Crucially, it also generates a "verification checklist" of conditions that must be met for the task to be considered successful.
 2.  **The Executor Agent:** Receives the task from the Planner and uses a tool (in this case, a web search) to execute it. It is simple, unreflective, and passes its raw output forward.
@@ -61,8 +79,6 @@ The results, based on a manual ground-truth evaluation of all 120 experimental r
 | **Verifier System** | 60% | 100% | **0** |
 | No Verifier Baseline | 25% | 27% | **11** |
 | Self-Verifier Baseline | 30% | 29% | **10** |
-
-!(https://storage.googleapis.com/agentops-images/agent-verifier-fp-chart.png)
 
 ### **5. Outcomes & Insights**
 
