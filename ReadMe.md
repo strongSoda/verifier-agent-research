@@ -38,11 +38,11 @@ graph TD;
         D;
     end
 
-    style A fill:#d4edda,stroke:#155724
-    style E fill:#d4edda,stroke:#155724
+    style A fill:#d4edda,stroke:#000000
+    style E fill:#d4edda,stroke:#000000
     style B fill:#fff3cd,stroke:#856404
-    style C fill:#cce5ff,stroke:#004085
-    style D fill:#f8d7da,stroke:#721c24
+    style C fill:#cce5ff,stroke:#000000
+    style D fill:#f8d7da,stroke:#000000
 ```
 
 1.  **The Planner Agent:** Receives a high-level goal and breaks it down into a single, concrete task. Crucially, it also generates a "verification checklist" of conditions that must be met for the task to be considered successful.
