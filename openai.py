@@ -25,16 +25,15 @@ if not API_KEY:
 
 client = openai.OpenAI(api_key=API_KEY)
 
-# --- CORRECTED MODEL NAME ---
 # Use a valid, available model. "gpt-4o" is the latest and best choice.
 OPENAI_MODEL = "gpt-4o" 
 
-# --- Evaluation Benchmark (Same as before for fair comparison) ---
+# --- Evaluation Benchmark ---
 BENCHMARK_TASKS = [
     {"id": 1, "goal": "What is the boiling point of water at sea level in Celsius?"}, {"id": 2, "goal": "Who is the current CEO of Microsoft?"}, {"id": 3, "goal": "What year did the first moon landing occur?"}, {"id": 4, "goal": "Find the main ingredient in a traditional Japanese Miso soup."}, {"id": 5, "goal": "What is the capital city of Australia?"}, {"id": 6, "goal": "What is the population of the underwater city of Atlantis?"}, {"id": 7, "goal": "Find the official website for the Stark Industries corporation from the Iron Man movies."}, {"id": 8, "goal": "What is the chemical formula for Kryptonite?"}, {"id": 9, "goal": "Who is the king of the United States?"}, {"id": 10, "goal": "How many dragons are there in the wild in Germany?"}, {"id": 11, "goal": "What is the weather like?"}, {"id": 12, "goal": "Find a good recipe."}, {"id": 13, "goal": "How tall is the president?"}, {"id": 14, "goal": "Is it a holiday today?"}, {"id": 15, "goal": "What is the latest news?"}, {"id": 16, "goal": "What was the score of the 1955 Super Bowl?"}, {"id": 17, "goal": "Did Thomas Edison invent the light bulb?"}, {"id": 18, "goal": "Is water a good conductor of electricity?"}, {"id": 19, "goal": "What is the currency used in Switzerland?"}, {"id": 20, "goal": "Find the text of the 'Gettysburg Address' written by George Washington."},
 ]
 
-# --- Agent Definitions (Using OpenAI API with better error handling) ---
+# --- Agent Definitions ---
 
 def call_openai_api(prompt: str, system_message: str):
     """Generic function to call the OpenAI Chat Completions API."""
@@ -99,7 +98,7 @@ def self_verifier_agent_openai(output: str, original_task: str) -> dict:
     result = call_openai_api(prompt, system_message)
     return result or {"verified": False, "reasoning": "Error in self-verification API call"}
 
-# --- Workflow Definitions (no changes here) ---
+# --- Workflow Definitions ---
 
 def run_verifier_system_openai(goal: str):
     plan = planner_agent_openai(goal)
