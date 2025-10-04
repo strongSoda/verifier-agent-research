@@ -1,5 +1,6 @@
 # The Verifier Agent: Mitigating Task Verification Failures in Agentic AI
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17265873.svg)](https://doi.org/10.5281/zenodo.17265873)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains the code, data, and analysis for the research paper on the "Verifier Agent," a lightweight, three-agent architecture designed to improve the reliability of agentic AI systems.
@@ -140,4 +141,6 @@ This study focused on single-step, atomic tasks to isolate and validate the Veri
 
 ### **Citation**
 
-If you find this work useful, please cite the upcoming paper: COMING SOON
+If you find this work useful, please cite the paper
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17265873.svg)](https://doi.org/10.5281/zenodo.17265873)
