@@ -1,7 +1,13 @@
 # The Verifier Agent: Mitigating Task Verification Failures in Agentic AI
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17265873.svg)](https://doi.org/10.5281/zenodo.17265873)
+
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/strongsoda/verifier-agent-demo)
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
 This repository contains the code, data, and analysis for the research paper on the "Verifier Agent," a lightweight, three-agent architecture designed to improve the reliability of agentic AI systems.
 
@@ -92,7 +98,7 @@ The results, based on a manual ground-truth evaluation of all 120 experimental r
 ### **6. Repository Contents**
 
 * `phi.py`: The evaluation script for running the experiment with a local Ollama model (e.g., Phi, Llama3).
-* `openai.py`: The evaluation script for running the experiment with the OpenAI API (GPT-4o).
+* `run_openai_eval.py`: The evaluation script for running the experiment with the OpenAI API (GPT-4o).
 * `evaluation_results.csv`: The raw results from the Phi  evaluation.
 * `evaluation_results_openai.csv`: The raw results from the GPT-4o evaluation.
 
@@ -130,7 +136,7 @@ The results, based on a manual ground-truth evaluation of all 120 experimental r
     ```
 3.  **Run the Evaluation:**
     ```bash
-    python openai.py
+    python run_openai_eval.py
     ```
 
 ### **8. Limitations & Future Work**
